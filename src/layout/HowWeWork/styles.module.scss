@@ -1,0 +1,67 @@
+@use "@/styles" as *;
+
+.section {
+  position: relative;
+}
+
+.container {
+  @include Container;
+}
+
+.grid {
+  margin-top: var(--margin-section-title);
+  display: grid;
+  grid-auto-flow: row;
+  gap: 2.5rem;
+  grid-auto-rows: 7rem;
+
+  @include mobile-l {
+    grid-auto-rows: 7rem;
+  }
+
+  @include laptop {
+    grid-auto-rows: 10.25rem;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.workCard {
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--theme-color-gray-primary);
+
+  @include tablet {
+    gap: 1.25rem;
+    padding: 1rem;
+  }
+
+  @include desktop {
+    padding: 2.5rem;
+  }
+}
+
+.workCardNumber {
+  svg {
+    height: 4rem;
+  }
+}
+
+.workCardDot {
+  background: linear-gradient(
+    122.41deg,
+    #e6434e 29.26%,
+    rgba(230, 67, 78, 0) 119.37%
+  );
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  flex-shrink: 0;
+}
+
+.lightBackground {
+  @include LightBackground;
+}

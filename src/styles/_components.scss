@@ -1,0 +1,17 @@
+@mixin Container {
+  max-width: var(--container-width);
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+
+@mixin LightBackground {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-bg);
+  z-index: -1;
+
+  body[data-theme="light"] & {
+    display: block;
+  }
+}

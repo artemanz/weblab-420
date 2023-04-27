@@ -1,0 +1,107 @@
+@use "@/styles" as *;
+
+.container {
+  @include Container;
+
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 0.75rem;
+
+  @include desktop {
+    padding-block: 1.5rem;
+  }
+}
+
+.themeSwitcher {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 1.5rem;
+  z-index: 1;
+
+  @include laptop-l {
+    display: block;
+  }
+}
+
+.logoGroup {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.logo {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+
+  img {
+    max-width: 4rem;
+  }
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: var(--theme-color-gray-secondary);
+}
+
+.logoTextTitle {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.logoTextSubtitle {
+  line-height: normal;
+}
+
+.nav {
+  display: none;
+
+  @include laptop-l {
+    display: flex;
+    gap: 2rem;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  li {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.contactsGroup {
+  display: none;
+
+  @include laptop-l {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contactLink {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.mobileMenu {
+  @include laptop-l {
+    display: none;
+  }
+}

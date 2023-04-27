@@ -1,0 +1,23 @@
+@use "@/styles" as *;
+
+.container {
+  @include Container;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.formContainer {
+  @include laptop {
+    max-width: 40%;
+  }
+}
+
+.image {
+  display: none;
+  max-width: 40%;
+
+  @include laptop {
+    display: block;
+  }
+}

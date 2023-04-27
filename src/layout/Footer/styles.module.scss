@@ -1,0 +1,90 @@
+@use "@/styles" as *;
+
+.footer {
+  background-color: var(--color-focus);
+  padding: 2.5rem 0;
+}
+
+.container {
+  @include Container;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.links {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+
+  li::before {
+    display: none;
+  }
+}
+
+.socialIcon {
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &:hover {
+    svg path {
+      fill: var(--color-accent);
+    }
+  }
+}
+
+.mobileSocials {
+  @extend .socials;
+  margin-top: 1rem;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.desktopSocials {
+  @extend .socials;
+  display: none;
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.linksGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @include laptop {
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+  }
+}
+
+.infoBusiness {
+  @include laptop {
+    text-align: right;
+  }
+}

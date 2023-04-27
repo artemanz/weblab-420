@@ -1,0 +1,15 @@
+@use "@/styles" as *;
+
+.mobileMap {
+  margin-bottom: -4px;
+  @include laptop {
+    display: none;
+  }
+}
+
+.desktopMap {
+  display: none;
+  @include laptop {
+    display: block;
+  }
+}

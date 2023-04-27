@@ -1,0 +1,33 @@
+.themeSwitcher {
+  position: relative;
+  border: 2px solid var(--color-accent);
+  width: 4.5rem;
+  height: 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+
+  input {
+    display: none;
+    appearance: none;
+  }
+}
+
+.ico {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-color: var(--color-accent);
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 100ms linear;
+  transition-property: left, right;
+}
+
+.themeSwitcher input:checked + .ico {
+  left: calc(100% - 2rem + 2px);
+  // right: -2px;
+}

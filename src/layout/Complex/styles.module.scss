@@ -1,0 +1,64 @@
+@use "@/styles" as *;
+
+body[data-theme="light"] .section {
+  background-color: var(--color-focus-light);
+}
+
+.container {
+  @include Container;
+}
+
+.wrapper {
+  margin-top: var(--margin-section-title);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  @include laptop {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+}
+
+.startGroup {
+  flex-shrink: 0;
+  gap: 1rem;
+  @include laptop {
+    align-items: flex-start;
+  }
+}
+
+.startGroup,
+.endGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  font-size: var(--font-heading-3);
+  text-align: center;
+
+  @include laptop {
+    text-align: left;
+    font-size: 3rem;
+    max-width: 28rem;
+  }
+}
+
+.endGroup {
+  margin-inline: auto;
+  max-width: 30rem;
+  @include laptop {
+    margin-inline: 0;
+    max-width: 50%;
+  }
+}
+
+.button {
+  font-size: 14px;
+  @include bp(360px) {
+    font-size: var(--font-base);
+  }
+}

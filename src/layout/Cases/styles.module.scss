@@ -1,0 +1,73 @@
+@use "@/styles" as *;
+
+.container {
+  @include Container;
+}
+
+.casesGrid {
+  display: grid;
+  gap: 1rem;
+  margin-top: var(--margin-section-title);
+
+  @include laptop {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.case {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 10rem;
+
+  &:hover {
+    .caseHoverBox {
+      display: grid;
+    }
+  }
+}
+
+.caseBg {
+  margin-block: auto;
+  // position: absolute;
+  // inset: 0;
+}
+
+.caseHoverBox {
+  color: #fff;
+  padding: 1rem;
+  background: hsla(0, 0%, 0%, 0.7);
+  display: none;
+  align-content: space-between;
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+
+  @media ($mobile-l) {
+    padding-block: 4rem;
+    padding-inline: 20%;
+  }
+  @media ($laptop) {
+    padding-block: 2rem;
+  }
+}
+
+.caseHoverBoxTitle {
+  justify-self: center;
+  text-align: center;
+  max-width: 20rem;
+
+  @include mobile-l {
+    max-width: 40rem;
+    font-size: var(--font-large);
+  }
+}
+
+.caseHoverBoxInfo {
+}
+
+.caseHoverBoxLink {
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+body,
+body[data-theme="dark"] {
+  --theme-color-primary: var(--dark-color-primary);
+  --theme-color-secondary: var(--dark-color-secondary);
+  --theme-color-gray-primary: var(--dark-color-gray);
+  --theme-color-gray-secondary: var(--dark-color-gray-light);
+
+  background-color: var(--theme-color-primary);
+  color: var(--theme-color-secondary);
+}
+
+body[data-theme="light"] {
+  --theme-color-primary: var(--light-color-primary);
+  --theme-color-secondary: var(--light-color-secondary);
+  --theme-color-gray-primary: var(--light-color-gray);
+  --theme-color-gray-secondary: var(--light-color-gray-dark);
+}

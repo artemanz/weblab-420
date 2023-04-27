@@ -1,0 +1,152 @@
+@use "@/styles" as *;
+
+.container {
+  @include Container;
+}
+
+.priceList {
+  margin-top: var(--margin-section-title);
+
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+
+  ul {
+    padding-left: 0.75rem;
+  }
+}
+
+.siteBox,
+.bitrixBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: flex-start;
+
+  .content {
+    flex: 0 0 35%;
+  }
+
+  &:first-child {
+    flex-direction: column-reverse;
+  }
+
+  .image {
+    align-self: center;
+    max-width: 80%;
+  }
+
+  @include laptop {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 6rem;
+
+    &:first-child {
+      flex-direction: row;
+    }
+
+    .image {
+      height: 30rem;
+      max-width: none;
+    }
+  }
+}
+
+.bitrixBox {
+  .content {
+    flex-basis: auto;
+  }
+}
+
+.socialsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .button,
+  .price {
+    align-self: center;
+  }
+}
+
+.yandexBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+
+  @include laptop {
+    flex-direction: column;
+  }
+
+  .button {
+    align-self: center;
+  }
+}
+
+.boxColumnWrapper {
+  --social-image-height: 5.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin-inline: auto;
+
+  @include laptop {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-inline: 0;
+  }
+}
+
+.contentStart,
+.contentEnd {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialImage {
+  height: var(--social-image-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & img[alt="Instagram"] {
+    padding-left: 1.75rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+
+  @include laptop {
+    margin-inline: 0;
+    align-items: flex-start;
+  }
+}
+
+.contentList {
+  margin-top: 2.5rem;
+  line-height: 140%;
+}
+
+.price {
+  text-align: center;
+  font-size: var(--font-large);
+  margin-top: 1.25rem;
+}
+
+.button {
+  align-self: center;
+  margin-top: 1rem;
+
+  @include laptop {
+    align-self: flex-start;
+  }
+}

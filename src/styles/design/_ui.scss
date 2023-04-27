@@ -1,0 +1,60 @@
+a {
+  text-decoration: inherit;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: var(--color-link-hover);
+  }
+  &:active {
+    color: var(--color-link-active);
+  }
+}
+
+button,
+.AppButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  font: inherit;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+
+  li::before {
+    content: "\2022";
+    color: var(--color-accent);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: var(--font-weight-heading-1);
+  font-size: var(--font-heading-1);
+}
+
+h2 {
+  text-align: center;
+  font-weight: var(--font-weight-heading-2);
+  font-size: var(--font-heading-2);
+}
+
+h2.SpecialHeading {
+  text-align: center;
+  font-weight: var(--font-weight-special-heading);
+  font-size: var(--font-weight-special-heading);
+}
+
+h3 {
+  text-align: center;
+  font-weight: var(--font-weight-heading-3);
+  font-size: var(--font-heading-3);
+}
