@@ -34,7 +34,11 @@ function App() {
       // @ts-ignore
       metaTag.content = "width=1920";
     }
+    // document.location.search = 'lookAtMeNow=1';
+
+    window.setTimeout(() => setLoaded(true), 2000);
   }, []);
+
   useEffect(() => {
     if (theme == "light") document.body.dataset.theme = "light";
     if (theme == "dark") document.body.dataset.theme = "dark";

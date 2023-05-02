@@ -28,7 +28,7 @@ const animations: { [key: string]: MotionProps } = {
 };
 
 const Chat = (props: Props) => {
-  const {theme} = useContext(themeContext)
+  const { theme } = useContext(themeContext);
   const [animationEnd, setAnimationEnd] = useState(false);
 
   const clientMessage = useRef(null);
@@ -47,9 +47,7 @@ const Chat = (props: Props) => {
             animate={isClientInView ? animations.slideFromLeft.animate : {}}
             className={c.messageFromClient}
           >
-            <figure className={c.avatar}>
-              <img src={girl} alt="Client avatar" />
-            </figure>
+            <img className={c.avatar} src={girl} alt="Client avatar" />
             <div className={c.messageBox}>
               <p className={c.messageText}>
                 Почему я должна выбрать именно вас?
@@ -63,7 +61,10 @@ const Chat = (props: Props) => {
               <img src={man} alt="Client avatar" />
             </figure>
             <figure className={c.desktopAvatar}>
-              <img src={theme == "dark" ? bigManDark : bigManLight} alt="Client avatar" />
+              <img
+                src={theme == "dark" ? bigManDark : bigManLight}
+                alt="Client avatar"
+              />
             </figure>
             <motion.div
               ref={businessMessage}

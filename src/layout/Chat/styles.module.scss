@@ -41,7 +41,7 @@
   justify-items: end;
 
   @include desktop {
-    margin-right: 12.5rem;
+    margin-right: 5rem;
   }
 
   .messageBox {
@@ -62,7 +62,7 @@
 
     @include laptop {
       display: block;
-      width: 24rem;
+      width: 30rem;
       grid-column: 2;
       grid-row: 2 / span 5;
     }
@@ -116,11 +116,12 @@
 
   display: none;
   @include laptop {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   &Title {
-    margin-left: 3rem;
     text-transform: uppercase;
     color: var(--color-focus);
     font-weight: bold;

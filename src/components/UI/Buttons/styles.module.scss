@@ -6,9 +6,9 @@
   background: none;
   border-radius: 3rem;
   cursor: pointer;
+  white-space: nowrap;
 
   &[data-type="fullfilled"] {
-    font-weight: 600;
     border: none;
     background-color: var(--color-accent);
     color: var(--theme-color-primary);
@@ -16,6 +16,8 @@
 
   &:hover,
   &:focus {
+    transition: 250ms ease;
+    transition-property: background-color, color;
     color: #fff;
     border-color: transparent;
     background-color: var(--color-button-hover);

@@ -4,6 +4,8 @@ a {
 
   &:hover,
   &:focus {
+    transition: 250ms ease;
+    transition-property: background-color, color;
     color: var(--color-link-hover);
   }
   &:active {
@@ -16,6 +18,7 @@ button,
   background: none;
   border: none;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 input {

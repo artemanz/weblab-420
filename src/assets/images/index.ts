@@ -11,8 +11,8 @@ import service4Dark from "./service-4-dark.webp";
 import service4Light from "./service-4-light.webp";
 import complex from "./complex.webp";
 
-import girl from "./girl.svg";
-import man from "./man.svg";
+import girl from "./girl.webp";
+import man from "./man.webp";
 import bigManDark from "./big-man-dark.webp";
 import bigManLight from "./big-man-light.webp";
 import formGirlDark from "./form-girl-dark.webp";

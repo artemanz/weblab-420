@@ -28,7 +28,7 @@ const Header = (props: Props) => {
     <header className={c.header}>
       <div className={c.container}>
         <div className={c.logoGroup}>
-          <div className={c.logo}>
+          <a href="/" className={c.logo}>
             <img src={logo} alt="Logo image" />
             <div className={c.logoText}>
               <p className={c.logoTextTitle}>weblab 420</p>
@@ -37,7 +37,7 @@ const Header = (props: Props) => {
                 <br /> IT - продуктов
               </small>
             </div>
-          </div>
+          </a>
 
           {/* DESKTOP */}
           <nav className={c.nav}>

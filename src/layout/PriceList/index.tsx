@@ -41,7 +41,7 @@ const PriceList = (props: Props) => {
                 <li>Размещение сайта на хостинг</li>
                 <li>Помощь в приобретении домена</li>
               </ul>
-              <p className={c.price}>От 5000</p>
+              <p className={c.price}>От 5.000₽</p>
               <Link href="#bitrixForm" className={c.button} type="fullfilled">
                 Заказать сайт
               </Link>
@@ -74,7 +74,7 @@ const PriceList = (props: Props) => {
                 </ul>
               </div>
             </div>
-            <p className={c.price}>От 2.000</p>
+            <p className={c.price}>От 2.000₽</p>
             <Link href="#bitrixForm" className={c.button} type="fullfilled">
               Заказать оформление{" "}
             </Link>
@@ -92,7 +92,7 @@ const PriceList = (props: Props) => {
                 <li>Разработка посадочной страницы в Битрикс</li>
                 <li>Проведение обучения</li>
               </ul>
-              <p className={c.price}>От 10.000</p>
+              <p className={c.price}>От 10.000₽</p>
               <Link href="#bitrixForm" className={c.button} type="fullfilled">
                 Оформить Битрикс
               </Link>
@@ -114,7 +114,7 @@ const PriceList = (props: Props) => {
                 Настройка автоматического отслеживания и выставления ставок
               </li>
             </ul>
-            <p className={c.price}>От 8.000</p>
+            <p className={c.price}>От 8.000₽</p>
             <Link href="#bitrixForm" className={c.button} type="fullfilled">
               Заказать рекламу
             </Link>
