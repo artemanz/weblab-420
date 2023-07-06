@@ -4,17 +4,22 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "clean": "gulp clean",
+    "assets:dev": "gulp",
+    "assets:build": "gulp build",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.15",
+    "@vitejs/plugin-legacy": "^4.0.3",
     "clsx": "^1.2.1",
     "framer-motion": "^10.12.4",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "swiper": "^10.0.3"
   },
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.3",
@@ -23,6 +28,13 @@
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-fonter": "^0.3.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-webp": "^4.0.1",
     "postcss": "^8.4.23",
     "postcss-combine-media-query": "^1.0.1",
     "postcss-preset-env": "^8.3.2",

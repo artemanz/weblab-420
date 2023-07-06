@@ -1,14 +1,14 @@
 import { Link } from "@/components/UI";
 import c from "./styles.module.scss";
 import {
-  service1Dark,
-  service1Light,
-  service2Dark,
-  service2Light,
-  service3Dark,
-  service3Light,
-  service4Dark,
-  service4Light,
+  dark__service1,
+  dark__service2,
+  dark__service3,
+  dark__service4,
+  light__service1,
+  light__service2,
+  light__service3,
+  light__service4,
 } from "@/assets/images";
 import { useContext } from "react";
 import themeContext from "@/theme";
@@ -41,55 +41,63 @@ const AboutOurService = (props: Props) => {
 
   const services = [
     {
-      title: "Сайт для генерации заявок от клиентов",
+      title: "Сайт для генерации заявок",
       content: (
         <>
           <p className={c.serviceText}>
-            Сайт может быть настроен для различных целей: продажа товаров и
-            услуг, регистрация на мероприятия, подписка на новостную рассылку,
-            заполнение формы обратной связи и т.д.
+            Вы получите сайт, который отлично продает определенный товар или
+            услугу. Мы запустим ваш проект быстро и с комфортом для вас.
+            Спокойно занимайтесь бизнесом, а мы займемся сайтом.
           </p>
           <ul className={c.serviceList}>
             <li className={c.serviceListItem}>
-              Адаптация под все утройства и браузеры
+              Пришлите информацию - мы заполним сайт за вас
             </li>
-            <li className={c.serviceListItem}>Продающий контент</li>
-            <li className={c.serviceListItem}>Интеграция с Bitrix24 </li>
+            <li className={c.serviceListItem}>
+              Вы получите в подарок домен в зоне RU, РФ и др.
+            </li>
+            <li className={c.serviceListItem}>
+              Простой редактор сайтов позволяет вносить изменения на сайте без
+              привлечения специалиста
+            </li>
           </ul>
         </>
       ),
       button: { text: "Заказать сайт", href: "#bitrixForm" },
-      image: theme == "dark" ? service1Dark : service1Light,
+      image: theme == "dark" ? dark__service1 : light__service1,
     },
     {
-      title: "Оформленные профили социальных сетей",
+      title: "Регистрация в поисковых системах",
       content: (
         <>
           <p className={c.serviceText}>
-            Социальные сети оформляются специалистами в области дизайна и
-            маркетинга с учетом целей и задач вашего бизнеса. Качественный и
-            оригинальный контент способствует продвижению компании в сети.
+            Зарегистрируем ваш сайт в системе Яндекс и Google - первый шаг к
+            привлечению клиентов в Интернете.
           </p>
           <ul className={c.serviceList}>
-            <li className={c.serviceListItem}>Оформление группы ВК</li>
             <li className={c.serviceListItem}>
-              Создание обложек товаров и услуг
+              Определим ключевые слова и фразы
             </li>
-            <li className={c.serviceListItem}>Дизайн постов</li>
+            <li className={c.serviceListItem}>
+              Включим ключевые слова в заголовки страниц
+            </li>
+            <li className={c.serviceListItem}>
+              Подключим Яндекс.Метрику для анализа трафика
+            </li>
           </ul>
         </>
       ),
-      button: { text: "Заказать оформление", href: "#bitrixForm" },
-      image: theme == "dark" ? service2Dark : service2Light,
+      button: { text: "Заказать сайт", href: "#bitrixForm" },
+      image: theme == "dark" ? dark__service2 : light__service2,
     },
     {
-      title: "Готовая система продаж",
+      title: "Подключение Битрикс24",
       content: (
         <>
           <p className={c.serviceText}>
-            CRM-система — инструмент для автоматизации продаж и маркетинга.
-            Ведите всю клиентскую базу в одном месте, подключив все каналы
-            продаж: телефон, сайт, почту, соцсети и мессенджеры.
+            Битрикс24 - инструмент для автоматизации продаж и маркетинга. Ведите
+            всю клиентскую базу в одном месте, подключив все каналы продаж:
+            телефон, сайт, почту, социальные сети и мессенджеры.
           </p>
           <ul className={c.serviceList}>
             <li className={c.serviceListItem}>Совместная работа</li>
@@ -100,36 +108,40 @@ const AboutOurService = (props: Props) => {
           </ul>
         </>
       ),
-      button: { text: "Оформить CRM", href: "#bitrixForm" },
-      image: theme == "dark" ? service3Dark : service3Light,
+      button: { text: "Заказать сайт", href: "#bitrixForm" },
+      image: theme == "dark" ? dark__service3 : light__service3,
     },
     {
-      title: "Реклама и продвижение",
+      title: "Техническая поддержка 7 дней в неделю",
       content: (
         <>
           <p className={c.serviceText}>
-            Ваши товары или услуги нужны сотням, а то и тысячам людей. Позвольте
-            нам донести ваше предложение до них. Используйте наш десятилетний
-            опыт настройки Я.Директ на пользу вашему бизнесу!
+            Вы можете обратиться к нам по телефону, почте или в мессенджерах -
+            мы готовы помочь вам 7 дней в неделю.
           </p>
           <ul className={c.serviceList}>
             <li className={c.serviceListItem}>
-              Тексты убедительных объявлений
+              Ни одно ваше обращение не останется без ответа
             </li>
-            <li className={c.serviceListItem}>Отчеты в реальном времени</li>
-            <li className={c.serviceListItem}>Расчет бюджета за 15 минут</li>
+            <li className={c.serviceListItem}>
+              Если вы нам не дозвонились - мы вам перезвоним
+            </li>
+            <li className={c.serviceListItem}>
+              Мы бесплатно делимся советами по работе с сайтом
+            </li>
           </ul>
         </>
       ),
-      button: { text: "Заказать рекламу", href: "#bitrixForm" },
-      image: theme == "dark" ? service4Dark : service4Light,
+      button: { text: "Заказать сайт", href: "#bitrixForm" },
+      image: theme == "dark" ? dark__service4 : light__service4,
     },
   ];
 
   return (
-    <section className={c.section} id="aboutOurService">
+    <section className={c.section}>
+      <div className="anchor" id="aboutOurService" />
       <div className={c.container}>
-        <h2 className={c.title}>Что вы получите</h2>
+        <h2 className={c.title}>Что входит в стоимость</h2>
         <div className={c.services}>{services.map(createService)}</div>
       </div>
     </section>

@@ -1,5 +1,25 @@
 @use "@/styles" as *;
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: var(--theme-color-primary);
+  transition: opacity 300ms ease;
+
+  & + * {
+    padding-top: var(--header-height);
+  }
+
+  &.inactive {
+    @media ($desktop) {
+      opacity: 0.5;
+    }
+  }
+}
+
 .container {
   @include Container;
 
@@ -8,24 +28,7 @@
   justify-content: space-between;
   align-items: center;
   padding-block: 0.75rem;
-
-  @include desktop {
-    padding-block: 1.5rem;
-  }
-}
-
-.themeSwitcher {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  margin-top: 1.5rem;
-  margin-left: 1.25rem;
-  z-index: 1;
-
-  @include laptop-l {
-    display: block;
-  }
+  height: var(--header-height);
 }
 
 .logoGroup {
@@ -65,7 +68,7 @@
 .nav {
   display: none;
 
-  @include laptop-l {
+  @media ($desktop) {
     display: flex;
     gap: 2rem;
   }
@@ -85,7 +88,7 @@
 .contactsGroup {
   display: none;
 
-  @include laptop-l {
+  @media ($desktop) {
     display: flex;
     gap: 2rem;
   }
@@ -104,7 +107,7 @@
 }
 
 .mobileMenu {
-  @include laptop-l {
+  @media ($desktop) {
     display: none;
   }
 }

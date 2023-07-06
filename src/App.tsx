@@ -2,21 +2,26 @@ import { useEffect, useState } from "react";
 import {
   AboutOurService,
   BitrixForm,
-  Cases,
   Chat,
-  Complex,
+  Banner,
   Footer,
   Header,
   Hero,
   HowWeWork,
   Map,
   PriceList,
+  Quiz,
+  Portfolio,
+  Reviews,
 } from "./layout";
 import ThemeContext from "./theme";
 
 import { isMobile } from "react-device-detect";
 import { Loader } from "./components";
-import { AnimatePresence } from "framer-motion";
+
+import c from "./app.module.scss";
+import { ie } from "./assets/images";
+import { ArrowUp } from "./components/UI";
 
 const detectDesktopMode =
   !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone/i.test(
@@ -26,7 +31,23 @@ const detectDesktopMode =
 function App() {
   const initialTheme = JSON.parse(localStorage.getItem("theme")!) || "dark";
   const [theme, setTheme] = useState<"dark" | "light">(initialTheme);
-  const [loaded, setLoaded] = useState<boolean>(false);
+
+  const isIE = navigator.userAgent.indexOf("Trident/") > -1;
+
+  if (isIE)
+    return (
+      <div className={c.ie}>
+        <div className={c.bg} style={{ backgroundImage: `url(${ie})` }} />
+        <h2 className={c.title}>Горячо</h2>
+        <p className={c.subtitle}>
+          Вы уже близко.
+          <br />
+          Попробуйте открыть наш
+          <br />
+          сайт в другом браузере.
+        </p>
+      </div>
+    );
 
   useEffect(() => {
     if (isMobile && detectDesktopMode) {
@@ -34,9 +55,6 @@ function App() {
       // @ts-ignore
       metaTag.content = "width=1920";
     }
-    // document.location.search = 'lookAtMeNow=1';
-
-    window.setTimeout(() => setLoaded(true), 2000);
   }, []);
 
   useEffect(() => {
@@ -49,20 +67,22 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme: theme, setTheme: setTheme }}>
-      <AnimatePresence>{!loaded && <Loader />}</AnimatePresence>
       <Header />
       <main>
-        <Hero setLoaded={setLoaded} />
-        <AboutOurService />
-        <Complex />
-        <HowWeWork />
-        <Chat />
+        <Hero />
         <PriceList />
-        <Cases />
+        <AboutOurService />
+        <Banner />
+        <HowWeWork />
+        <Quiz />
+        <Portfolio />
+        <Chat />
+        <Reviews />
         <BitrixForm />
         <Map />
         <Footer />
       </main>
+      <ArrowUp />
     </ThemeContext.Provider>
   );
 }

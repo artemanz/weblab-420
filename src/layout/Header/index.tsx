@@ -1,14 +1,17 @@
 import { logo } from "@/assets/images";
 import c from "./styles.module.scss";
 import { Mail, MobileMenu as MobileMenuIcon, Phone } from "@/assets/icons";
-import { Link, ThemeSwitcher } from "@/components/UI";
+import { Link } from "@/components/UI";
 import { MobileMenu } from "@/components";
 import { useEffect, useState } from "react";
+import clsx from "clsx";
 
 type Props = {};
 
 const Header = (props: Props) => {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [active, setActive] = useState(false);
+  const [screenStart, setScreenStart] = useState(window.scrollY < 120);
 
   useEffect(() => {
     function handler(e: Event) {
@@ -24,12 +27,25 @@ const Header = (props: Props) => {
     }
   }, [mobileMenu]);
 
+  useEffect(() => {
+    function scrollHandler() {
+      if (window.scrollY < 120) setScreenStart(true);
+      else setScreenStart(false);
+    }
+    window.addEventListener("scroll", scrollHandler);
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, []);
+
   return (
-    <header className={c.header}>
+    <header
+      onPointerOver={() => setActive(true)}
+      onPointerLeave={() => setActive(false)}
+      className={clsx(c.header, !active && !screenStart && c.inactive)}
+    >
       <div className={c.container}>
         <div className={c.logoGroup}>
           <a href="/" className={c.logo}>
-            <img src={logo} alt="Logo image" />
+            <img src={logo} alt="Weblab logo" />
             <div className={c.logoText}>
               <p className={c.logoTextTitle}>weblab 420</p>
               <small className={c.logoTextSubtitle}>
@@ -46,13 +62,16 @@ const Header = (props: Props) => {
                 <a href="#howWeWork">Как мы работаем</a>
               </li>
               <li>
-                <a href="#priceList">Прайс-лист</a>
+                <a href="#portfolio">Портфолио</a>
               </li>
               <li>
-                <a href="#cases">Кейсы</a>
+                <a href="#banner">Акции</a>
               </li>
               <li>
-                <a href="#bitrixForm">Стать клиентом+</a>
+                <a href="#priceList">Цены</a>
+              </li>
+              <li>
+                <a href="#reviews">Отзывы</a>
               </li>
             </ul>
           </nav>
@@ -60,27 +79,23 @@ const Header = (props: Props) => {
 
         <div className={c.contactsGroup}>
           <Link
-            href="https://project420.ru/login?next=%2Fprofile"
+            href="#bitrixForm"
             className={c.loginButton}
             type="outlined"
           >
-            Вход
+            Заказать сайт
           </Link>
 
           <div className={c.contact}>
-            <a className={c.contactLink} href="tel:+74993254202">
+            <a className={c.contactLink} href="tel:+79014200420">
               <Phone />
-              +7 (499) 325-42-02
+              +7 (901) 420-0-420
             </a>
             <a className={c.contactLink} href="mailto:mail@project420.ru">
               <Mail />
               mail@project420.ru
             </a>
           </div>
-        </div>
-
-        <div className={c.themeSwitcher}>
-          <ThemeSwitcher />
         </div>
 
         {/* MOBILE */}

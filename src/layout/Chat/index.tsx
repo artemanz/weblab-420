@@ -151,7 +151,7 @@ const Chat = (props: Props) => {
                   <motion.div {...animations.typingMiddle}></motion.div>
                   <motion.div {...animations.typingStart}></motion.div>
                 </div>
-                <p>typing</p>
+                <p>печатает</p>
               </>
             )}
           </div>

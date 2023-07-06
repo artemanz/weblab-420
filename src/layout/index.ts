@@ -1,7 +1,7 @@
 export { default as Header } from "./Header";
 export { default as Hero } from "./Hero";
 export { default as AboutOurService } from "./AboutOurService";
-export { default as Complex } from "./Complex";
+export { default as Banner } from "./Banner";
 export { default as HowWeWork } from "./HowWeWork";
 export { default as Chat } from "./Chat";
 export { default as PriceList } from "./PriceList";
@@ -9,3 +9,6 @@ export { default as Cases } from "./Cases";
 export { default as BitrixForm } from "./BitrixForm";
 export { default as Map } from "./Map";
 export { default as Footer } from "./Footer";
+export { default as Quiz } from "./Quiz";
+export { default as Portfolio } from "./Portfolio";
+export { default as Reviews } from "./Reviews";

@@ -70,38 +70,44 @@ const MobileMenu = ({ visible, setVisible }: Props) => {
                   </a>
                 </li>
                 <li>
+                  <a onClick={() => setVisible(false)} href="#portfolio">
+                  Портфолио
+                  </a>
+                </li>
+                <li>
+                  <a onClick={() => setVisible(false)} href="#banner">
+                  Акции
+                  </a>
+                </li>
+                <li>
                   <a onClick={() => setVisible(false)} href="#priceList">
-                    Прайс-лист
+                  Цены
                   </a>
                 </li>
                 <li>
-                  <a onClick={() => setVisible(false)} href="#cases">
-                    Кейсы
-                  </a>
-                </li>
-                <li>
-                  <a onClick={() => setVisible(false)} href="#bitrixForm">
-                    Стать клиентом+
+                  <a onClick={() => setVisible(false)} href="#reviews">
+                  Отзывы
                   </a>
                 </li>
               </ul>
             </nav>
 
             <Link
-              href="https://project420.ru/login?next=%2Fprofile"
+              href="#bitrixForm"
               className={c.loginButton}
               type="outlined"
+              onClick={() => setVisible(false)}
             >
-              Вход
+              Заказать сайт
             </Link>
 
             <div className={c.footer}>
               <ThemeSwitcher />
 
               <div className={c.contact}>
-                <a className={c.contactLink} href="tel:+74993254202">
+                <a className={c.contactLink} href="tel:+79014200420">
                   <Phone />
-                  +7 (499) 325-42-02
+                  +7 (901) 420-0-420
                 </a>
                 <a className={c.contactLink} href="mailto:mail@project420.ru">
                   <Mail />

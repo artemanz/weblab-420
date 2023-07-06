@@ -1,0 +1,78 @@
+@use "@/styles" as *;
+
+.container {
+  @include Container;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  background: var(--gradient-banner);
+  padding: 3rem 1rem;
+  max-width: 78rem;
+  margin: auto;
+  flex-direction: column;
+
+  @media ($laptop) {
+    padding-inline: 7rem;
+    border-radius: 4rem;
+    flex-direction: row;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    align-items: center;
+
+    @media ($laptop) {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  &_title {
+    font-size: var(--font-heading-2);
+    font-weight: var(--font-weight-heading-2);
+
+    span {
+      font-size: var(--font-base);
+      font-weight: normal;
+      @media ($laptop) {
+        font-weight: inherit;
+        font-size: inherit;
+      }
+    }
+
+    @media ($laptop) {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &_descr {
+    br:first-child {
+      display: none;
+      @media ($laptop) {
+        display: block;
+      }
+    }
+  }
+
+  &_button[data-type="fullfilled"] {
+    color: var(--theme-color-secondary);
+  }
+
+  &_image {
+    width: 100%;
+    max-width: 30rem;
+
+    @media ($laptop) {
+      width: 40%;
+    }
+  }
+}

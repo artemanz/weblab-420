@@ -5,19 +5,73 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
+  max-width: 75rem;
+  flex-direction: column-reverse;
+
+  @media ($tablet) {
+    flex-direction: row;
+  }
+
+  @media ($laptop) {
+    gap: 6rem;
+  }
 }
 
 .formContainer {
-  @include laptop {
-    max-width: 40%;
+  flex-basis: 60%;
+  @media ($tablet) {
+    max-width: 30rem;
   }
 }
 
-.image {
-  display: none;
-  max-width: 40%;
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex-basis: 40%;
 
-  @include laptop {
-    display: block;
+  &_title {
+    text-align: left;
   }
+
+  &_subtitle {
+    font-size: var(--font-large);
+  }
+
+  &_socials {
+    display: none;
+
+    @media ($tablet) {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  &_social {
+    svg {
+      width: 2.75rem;
+      height: 2.75rem;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.mobileSocials {
+  @extend .description_socials;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  order: -1;
+  margin-top: 1rem;
+
+  @media ($tablet) {
+    display: none;
+  }
+}
+
+.mobileSocial {
+  @extend .description_social;
 }

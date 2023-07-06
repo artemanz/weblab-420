@@ -10,51 +10,28 @@
 }
 
 .container {
-  position: relative;
   @include Container;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 4.5rem 2rem;
+  align-items: center;
 
-  @include laptop-l {
-    align-items: center;
+  @media ($desktop) {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
 .title {
-  text-align: center;
-
-  @include tablet {
-    text-align: left;
-    br {
-      display: none;
-    }
-  }
-
-  @include laptop-l {
-    text-align: left;
-  }
+  line-height: 140%;
 }
 
 .subtitle {
-  font-size: var(--font-heading-3);
-  text-align: center;
+  font-size: 1.5rem;
 
-  @include tablet {
-    br {
-      display: none;
-    }
-  }
-
-  @include laptop-l {
-    font-size: var(--font-heading-special);
-    text-align: left;
-
-    br:not(#\#) {
-      display: block;
-    }
+  @media ($laptop) {
+    font-size: 2rem;
   }
 }
 
@@ -69,22 +46,38 @@
   align-items: center;
   gap: 1.25rem;
   flex: 1 0 auto;
+  max-width: 40rem;
+  text-align: center;
 
-  @include laptop-l {
+  @media ($desktop) {
+    text-align: left;
     align-items: flex-start;
-  }
-
-  @include desktop {
   }
 }
 
 .image {
-  @include desktop {
-    flex-shrink: 0;
-    max-width: 54rem;
-  }
+  width: 100%;
+  max-width: 50rem;
 }
 
-.lightBackground {
-  @include LightBackground;
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: var(--gradient-primary);
+}
+
+.themeSwitcher {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  margin-top: 1.5rem;
+  margin-left: 1.25rem;
+  z-index: 1;
+
+  @include laptop-l {
+    display: block;
+  }
 }
