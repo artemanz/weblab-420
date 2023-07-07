@@ -2,5 +2,5 @@ div.swiper-pagination {
   position: static;
   margin-top: 2.5rem;
 
-  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-inactive-color: var(--theme-color-secondary);
 }

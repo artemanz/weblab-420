@@ -24,7 +24,8 @@ const slider = [
     id: 1,
     href: "https://www.mashamati.com/",
     image: portfolio1,
-    mobileLink: {},
+    linkText: "Перейти на сайт",
+    mobileLink: { color: "white" },
     title: "Веб-сайт для певицы",
     description: `Цель проекта: создать уникальное и вдохновляющее пространство, которое объединяет музыку и творчество Марии с ее преданными поклонниками. Этот сайт является эстетическим и функциональным хранилищем всего, что связано с Машей Мати
     `,
@@ -38,8 +39,9 @@ const slider = [
     id: 2,
     href: "https://vk.com/weblab420",
     image: portfolio2,
+    linkText: "Перейти в сообщество",
     mobileLink: {
-      dark: true,
+      color: "black",
     },
     title: "Оформление сообщества VK для веб-студии",
     description: `Цель проекта:  разработка и применение фирменного стиля веб-студии в оформлении сообщества VK. Это включает создание логотипа, цветовой палитры, типографики и других элементов, которые будут способствовать узнаваемости и установлению связи с брендом веб-студии.`,
@@ -53,7 +55,8 @@ const slider = [
     id: 3,
     href: "https://vk.com/project420ru",
     image: portfolio3,
-    mobileLink: {},
+    linkText: "Перейти в сообщество",
+    mobileLink: { color: "white" },
     title: "Оформление сообщества VK для IT-компании",
     description: `Цель проекта:  создание привлекательной и профессиональной графической атмосферы, которая будет привлекать внимание пользователей, улучшать восприятие бренда компании и демонстрировать компетенции в сфере информационных технологий.`,
     list: [
@@ -66,7 +69,8 @@ const slider = [
     id: 4,
     href: "",
     image: portfolio4,
-    mobileLink: {},
+    linkText: "Перейти на сайт",
+    mobileLink: { color: "white" },
     title: "Оформление сообщества VK для сервиса по уборке",
     description: `Цель проекта: создание коллекции графических элементов, которые будут привлекать внимание пользователей и улучшат восприятие бренда Идеальная Чистота+ в социальной сети VKontakte
     `,
@@ -80,7 +84,8 @@ const slider = [
     id: 5,
     href: "http://hlebmaslo.tilda.ws",
     image: portfolio5,
-    mobileLink: {},
+    linkText: "Перейти на сайт",
+    mobileLink: { color: "black" },
     title: "Коллекция баннеров для пекарни-столовой",
     description: `Цель проекта: разработка эффективных и привлекательных графических элементов, которые будут использоваться для привлечения внимания посетителей и продвижения продукции пекарни-столовой.
     `,
@@ -90,9 +95,8 @@ const slider = [
     id: 6,
     href: "http://moegnezdishko.webflow.io/",
     image: portfolio6,
-    mobileLink: {
-      dark: true,
-    },
+    linkText: "Перейти на сайт",
+    mobileLink: { color: "white" },
     title: "Веб-сайт для детского сада",
     description: `Цель проекта:  создание удобной и информативной платформы, которая будет служить центральным источником информации для родителей, привлечь новых клиентов и обеспечить эффективное взаимодействие между детским садом и его сообществом.`,
     list: ["Платформа: Webflow", "Стоимость: 15000 ₽", "Язык сайта: русский"],
@@ -123,17 +127,19 @@ const Portfolio = (props: Props) => {
               <div className={c.slide}>
                 {slide.href && (
                   <a
+                    style={{ color: slide.mobileLink.color }}
                     target="_blank"
                     href={slide.href}
-                    className={clsx(
-                      c.slide_mobileLink,
-                      slide.mobileLink.dark && c.black
-                    )}
+                    className={c.slide_mobileLink}
                   >
-                    Перейти на сайт
+                    {slide.linkText}
                   </a>
                 )}
-                <img src={slide.image} className={c.slide_image} alt="Portfolio image" />
+                <img
+                  src={slide.image}
+                  className={c.slide_image}
+                  alt="Portfolio image"
+                />
                 <div className={c.slide_content}>
                   <h2 className={c.slide_title}>{slide.title}</h2>
                   <p className={c.slide_descr}>{slide.description}</p>
@@ -144,7 +150,7 @@ const Portfolio = (props: Props) => {
                   </ul>
                   {slide.href && (
                     <Link target="_blank" href={slide.href} type="outlined">
-                      Перейти на сайт
+                      {slide.linkText}
                     </Link>
                   )}
                 </div>

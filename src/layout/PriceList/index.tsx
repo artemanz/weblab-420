@@ -17,32 +17,56 @@ const PriceList = (props: Props) => {
           <li className={c.price}>
             <p className={c.price_title}>от 6.000₽</p>
             <p className={c.price_descr}>Одностраничный сайт</p>
-            <p className={c.price_special}>CRM в подарок</p>
-            <Link href="#aboutOurService" type="fullfilled" className={c.price_button}>
+            <a href="#bitrix24" className={c.price_special}>
+              CRM в подарок
+            </a>
+            <Link
+              href="#aboutOurService"
+              type="fullfilled"
+              className={c.price_button}
+            >
               Что входит в цену
             </Link>
           </li>
           <li className={c.price}>
             <p className={c.price_title}>от 20.000₽</p>
             <p className={c.price_descr}>Многостраничный сайт</p>
-            <p className={c.price_special}>CRM в подарок</p>
-            <Link href="#aboutOurService" type="fullfilled" className={c.price_button}>
+            <a href="#bitrix24" className={c.price_special}>
+              CRM в подарок
+            </a>
+            <Link
+              href="#aboutOurService"
+              type="fullfilled"
+              className={c.price_button}
+            >
               Что входит в цену
             </Link>
           </li>
           <li className={c.price}>
             <p className={c.price_title}>от 50.000₽</p>
             <p className={c.price_descr}>Сайт-Бизнес</p>
-            <p className={c.price_special}>CRM в подарок</p>
-            <Link href="#aboutOurService" type="fullfilled" className={c.price_button}>
+            <a href="#bitrix24" className={c.price_special}>
+              CRM в подарок
+            </a>
+            <Link
+              href="#aboutOurService"
+              type="fullfilled"
+              className={c.price_button}
+            >
               Что входит в цену
             </Link>
           </li>
           <li className={c.price}>
             <p className={c.price_title}>от 100.000₽</p>
             <p className={c.price_descr}>Интернет-магазин</p>
-            <p className={c.price_special}>CRM в подарок</p>
-            <Link href="#aboutOurService" type="fullfilled" className={c.price_button}>
+            <a href="#bitrix24" className={c.price_special}>
+              CRM в подарок
+            </a>
+            <Link
+              href="#aboutOurService"
+              type="fullfilled"
+              className={c.price_button}
+            >
               Что входит в цену
             </Link>
           </li>

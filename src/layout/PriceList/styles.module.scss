@@ -11,7 +11,7 @@
   gap: 6rem 2rem;
   // max-width: 70rem;
 
-  @media ($tablet){
+  @media ($tablet) {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -37,5 +37,9 @@
 
   &_special {
     color: var(--color-accent);
+  }
+
+  &_button:not(#\#) {
+    color: var(--theme-color-secondary);
   }
 }

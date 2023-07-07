@@ -94,6 +94,11 @@ const AboutOurService = (props: Props) => {
       title: "Подключение Битрикс24",
       content: (
         <>
+          <div
+            className="anchor"
+            id="bitrix24"
+            style={{ top: "calc(var(--header-height) * -1.5)" }}
+          />
           <p className={c.serviceText}>
             Битрикс24 - инструмент для автоматизации продаж и маркетинга. Ведите
             всю клиентскую базу в одном месте, подключив все каналы продаж:

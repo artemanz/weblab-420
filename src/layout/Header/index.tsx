@@ -6,7 +6,8 @@ import { MobileMenu } from "@/components";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 
-type Props = {};
+type Props = {
+};
 
 const Header = (props: Props) => {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -78,11 +79,7 @@ const Header = (props: Props) => {
         </div>
 
         <div className={c.contactsGroup}>
-          <Link
-            href="#bitrixForm"
-            className={c.loginButton}
-            type="outlined"
-          >
+          <Link href="#bitrixForm" className={c.loginButton} type="outlined">
             Заказать сайт
           </Link>
 

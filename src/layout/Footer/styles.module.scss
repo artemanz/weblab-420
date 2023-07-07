@@ -1,6 +1,8 @@
 @use "@/styles" as *;
 
 .footer {
+  --font-base: 1rem;
+  font-size: var(--font-base);
   background-color: var(--color-focus);
   padding: 2.5rem 0;
 }
@@ -10,7 +12,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .links {
@@ -21,7 +23,7 @@
 
   @media ($laptop) {
     flex-direction: row;
-    gap: 3rem;
+    gap: 2rem;
   }
 }
 
@@ -68,6 +70,7 @@
 .linksGroup {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .info {
@@ -92,5 +95,5 @@
 .infoAdress{
   display: flex;
   flex-direction: column;
-  gap: 1.5rem
+  gap: 1rem
 }

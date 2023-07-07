@@ -43,12 +43,12 @@ const BitrixForm = (props: Props) => {
           </p>
           <ul className={c.description_socials}>
             <li className={c.description_social}>
-              <a target="_blank" href="https://t.me/weblab420_ru">
+              <a target="_blank" href="https://t.me/weblab420ru">
                 <Telegram color="var(--color-focus)" />
               </a>
             </li>
             <li className={c.description_social}>
-              <a target="_blank" href="https://wa.me/79014200420">
+              <a target="_blank" href="https://wa.me/79014200420?text=">
                 <Whatsapp color="var(--color-focus)" />
               </a>
             </li>
@@ -57,12 +57,12 @@ const BitrixForm = (props: Props) => {
 
         <ul className={c.mobileSocials}>
             <li className={c.mobileSocial}>
-              <a target="_blank" href="https://t.me/weblab420_ru">
+              <a target="_blank" href="https://t.me/weblab420ru">
                 <Telegram color="var(--color-focus)" />
               </a>
             </li>
             <li className={c.mobileSocial}>
-              <a target="_blank" href="https://wa.me/79014200420">
+              <a target="_blank" href="https://wa.me/79014200420?text=">
                 <Whatsapp color="var(--color-focus)" />
               </a>
             </li>

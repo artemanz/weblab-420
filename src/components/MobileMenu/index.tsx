@@ -1,6 +1,6 @@
 import { logo } from "@/assets/images";
 import c from "./styles.module.scss";
-import { Button, Link, ThemeSwitcher } from "../UI";
+import { Link, ThemeSwitcher } from "../UI";
 import { Close, Mail, Phone } from "@/assets/icons";
 import { AnimatePresence, motion } from "framer-motion";
 import type { Variants } from "framer-motion";

@@ -1,18 +1,37 @@
+import { useEffect, useState } from "react";
 import c from "./styles.module.scss";
 
 type Props = {};
 
 const ArrowUp = (props: Props) => {
+  const [arrowUp, setArrowUp] = useState(false);
+
+  useEffect(() => {
+    function scrollHandler() {
+      if (window.scrollY > 300) {
+        setArrowUp(true);
+      } else {
+        setArrowUp(false);
+      }
+    }
+    window.addEventListener("scroll", scrollHandler);
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, []);
+
   return (
     <button
-      onClick={() => window.scrollTo(0, 0)}
+      onClick={() => {
+        setArrowUp(false);
+        window.scrollTo(0, 0);
+      }}
       id="arrow_up"
       className={c.arrow}
+      style={{ opacity: arrowUp ? 1 : 0 }}
     >
       <svg
-        width="89"
-        height="89"
-        viewBox="0 0 89 89"
+        width="90"
+        height="90"
+        viewBox="0 0 90 90"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

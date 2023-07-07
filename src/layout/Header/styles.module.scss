@@ -14,7 +14,7 @@
   }
 
   &.inactive {
-    @media ($desktop) {
+    @media ($laptop-lg) {
       opacity: 0.5;
     }
   }
@@ -51,7 +51,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  color: var(--theme-color-gray-secondary);
 }
 
 .logoTextTitle {
@@ -68,7 +67,7 @@
 .nav {
   display: none;
 
-  @media ($desktop) {
+  @media ($laptop-lg) {
     display: flex;
     gap: 2rem;
   }
@@ -88,7 +87,7 @@
 .contactsGroup {
   display: none;
 
-  @media ($desktop) {
+  @media ($laptop-lg) {
     display: flex;
     gap: 2rem;
   }
@@ -107,7 +106,7 @@
 }
 
 .mobileMenu {
-  @media ($desktop) {
+  @media ($laptop-lg) {
     display: none;
   }
 }

@@ -23,8 +23,7 @@ const Hero = () => {
         <div className={c.offer}>
           <h1 className={c.title}>Создание сайтов по самым выгодным ценам</h1>
           <p className={c.subtitle}>
-            При заказе любого сайта
-            <br /> домен .ru В ПОДАРОК!
+            При заказе любого сайта домен .ru <strong>В ПОДАРОК</strong>!
           </p>
 
           <Link className={c.button} href="#priceList" type="fullfilled">
