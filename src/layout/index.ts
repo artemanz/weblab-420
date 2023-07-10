@@ -5,7 +5,6 @@ export { default as Banner } from "./Banner";
 export { default as HowWeWork } from "./HowWeWork";
 export { default as Chat } from "./Chat";
 export { default as PriceList } from "./PriceList";
-export { default as Cases } from "./Cases";
 export { default as BitrixForm } from "./BitrixForm";
 export { default as Map } from "./Map";
 export { default as Footer } from "./Footer";

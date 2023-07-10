@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  gap: 4rem;
+  gap: 3rem;
   max-width: 75rem;
   margin-inline: auto;
 
@@ -48,6 +48,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
+    max-width: 60%;
 
     @media ($tablet){
       display: flex;
