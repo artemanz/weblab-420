@@ -20,6 +20,7 @@ const Footer = (props: Props) => {
             <a href="#banner">Акции</a>
             <a href="#priceList">Цены</a>
             <a href="#reviews">Отзывы</a>
+            <a href="#bitrixForm">Заказать сайт</a>
           </nav>
 
           <ul className={c.desktopSocials}>
@@ -32,10 +33,16 @@ const Footer = (props: Props) => {
             ))}
           </ul>
         </div>
+        <ul className={c.mobileSocials}>
+          {socials.map((s) => (
+            <li key={s.id}>
+              <a className={c.socialIcon} href={s.href} target="_blank">
+                {<s.icon />}
+              </a>
+            </li>
+          ))}
+        </ul>
         <div className={c.info}>
-          <p className={c.infoBusiness}>
-            ИНН 9728068473 <br /> ОГРН 1227700409507
-          </p>
           <div className={c.infoAdress}>
             <a
               target="_blank"
@@ -48,16 +55,9 @@ const Footer = (props: Props) => {
               22
             </p>
           </div>
-
-          <ul className={c.mobileSocials}>
-            {socials.map((s) => (
-              <li key={s.id}>
-                <a className={c.socialIcon} href={s.href} target="_blank">
-                  {<s.icon />}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <p className={c.infoBusiness}>
+            ИНН 9728068473 <br /> ОГРН 1227700409507
+          </p>
         </div>
       </div>
     </footer>

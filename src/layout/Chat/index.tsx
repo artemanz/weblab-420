@@ -143,7 +143,7 @@ const Chat = (props: Props) => {
           <p className={c.typingTitle}>weblab 420</p>
           <div className={c.typingBox}>
             {animationEnd ? (
-              <p>online</p>
+              <p>онлайн</p>
             ) : (
               <>
                 <div className={c.typingDots}>

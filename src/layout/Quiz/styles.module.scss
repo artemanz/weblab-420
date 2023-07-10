@@ -2,12 +2,4 @@
 
 .formContainer {
   margin-top: var(--margin-section-title);
-
-  iframe {
-    max-height: 25rem;
-
-    @media ($desktop) {
-      max-height: none;
-    }
-  }
 }

@@ -41,7 +41,7 @@ const slider = [
     image: portfolio2,
     linkText: "Перейти в сообщество",
     mobileLink: {
-      color: "black",
+      color: "#EE6F78",
     },
     title: "Оформление сообщества VK для веб-студии",
     description: `Цель проекта:  разработка и применение фирменного стиля веб-студии в оформлении сообщества VK. Это включает создание логотипа, цветовой палитры, типографики и других элементов, которые будут способствовать узнаваемости и установлению связи с брендом веб-студии.`,
@@ -70,7 +70,7 @@ const slider = [
     href: "",
     image: portfolio4,
     linkText: "Перейти на сайт",
-    mobileLink: { color: "white" },
+    mobileLink: { color: "#FEE300" },
     title: "Оформление сообщества VK для сервиса по уборке",
     description: `Цель проекта: создание коллекции графических элементов, которые будут привлекать внимание пользователей и улучшат восприятие бренда Идеальная Чистота+ в социальной сети VKontakte
     `,
@@ -85,7 +85,7 @@ const slider = [
     href: "http://hlebmaslo.tilda.ws",
     image: portfolio5,
     linkText: "Перейти на сайт",
-    mobileLink: { color: "black" },
+    mobileLink: { color: "#000000" },
     title: "Коллекция баннеров для пекарни-столовой",
     description: `Цель проекта: разработка эффективных и привлекательных графических элементов, которые будут использоваться для привлечения внимания посетителей и продвижения продукции пекарни-столовой.
     `,
@@ -93,10 +93,10 @@ const slider = [
   },
   {
     id: 6,
-    href: "http://moegnezdishko.webflow.io/",
+    href: "http://www.moegnezdishko.ru/",
     image: portfolio6,
     linkText: "Перейти на сайт",
-    mobileLink: { color: "white" },
+    mobileLink: { color: "#EC3C62" },
     title: "Веб-сайт для детского сада",
     description: `Цель проекта:  создание удобной и информативной платформы, которая будет служить центральным источником информации для родителей, привлечь новых клиентов и обеспечить эффективное взаимодействие между детским садом и его сообществом.`,
     list: ["Платформа: Webflow", "Стоимость: 15000 ₽", "Язык сайта: русский"],
@@ -141,7 +141,7 @@ const Portfolio = (props: Props) => {
                   alt="Portfolio image"
                 />
                 <div className={c.slide_content}>
-                  <h2 className={c.slide_title}>{slide.title}</h2>
+                  <h3 className={c.slide_title}>{slide.title}</h3>
                   <p className={c.slide_descr}>{slide.description}</p>
                   <ul className={c.slide_list}>
                     {slide.list.map((li) => (

@@ -24,7 +24,7 @@
       color: inherit;
     }
     position: absolute;
-    top: 1rem;
+    top: 1.5rem;
     left: 50%;
     translate: -50% 0;
 
@@ -40,6 +40,11 @@
   &_image {
     width: 90%;
     max-width: 22rem;
+    @media ($tablet) {
+      width: auto;
+      height: 80vh;
+      max-height: 600px;
+    }
   }
 
   &_content {
@@ -50,7 +55,7 @@
     gap: 1.5rem;
     max-width: 60%;
 
-    @media ($tablet){
+    @media ($tablet) {
       display: flex;
     }
   }

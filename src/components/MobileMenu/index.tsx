@@ -109,9 +109,9 @@ const MobileMenu = ({ visible, setVisible }: Props) => {
                   <Phone />
                   +7 (901) 420-0-420
                 </a>
-                <a className={c.contactLink} href="mailto:mail@project420.ru">
+                <a className={c.contactLink} href="mailto:mail@weblab420.ru">
                   <Mail />
-                  mail@project420.ru
+                  mail@weblab420.ru
                 </a>
               </div>
             </div>

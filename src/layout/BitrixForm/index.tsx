@@ -1,7 +1,6 @@
 import { useContext, useEffect, useMemo, useRef } from "react";
 import c from "./styles.module.scss";
 import themeContext from "@/theme";
-import { formGirlDark, formGirlLight } from "@/assets/images";
 import { Telegram, Whatsapp } from "@/assets/socials";
 
 type Props = {};
